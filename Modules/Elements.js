@@ -17,11 +17,18 @@ export class Element{
 }
 
 export class float extends Element{
-    constructor(world, element, height, xcoord, up){
+    constructor(world, element, height, xcoord, up, angle){
         super(world, element, height, xcoord);
         this.x -= this.width/2;
         this.y -= up;
+        this.angle = angle
         // console.log(this.x, this.y);
+    }
+
+    update(deltaTime){
+        this.angle += deltaTime * 0.001;
+        this.y = this.y + Math.sin(this.angle) * this.world.refSize/1000;
+        console.log(this.y);
     }
 }
 

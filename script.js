@@ -63,8 +63,8 @@ window.addEventListener('load', function() {
             ];
 
             this.worldElementsUp = 
-            [new float(this, document.getElementById('name'), this.refSize*1.8, this.width/2, this.height/2),
-            new float(this, document.getElementById('job'), this.refSize, this.width/2, this.height/2 - this.refSize*1.5)];
+            [new float(this, document.getElementById('name'), this.refSize*1.8, this.width/2, this.height/2, 45),
+            new float(this, document.getElementById('job'), this.refSize, this.width/2, this.height/2 - this.refSize*1.5, 0),];
             this.worldElementsUp[1].x += this.worldElementsUp[0].width/5;
             this.worldElementsDown[0].x = this.width/5 - this.worldElementsDown[0].width/2;
             for(let i = 3; i < 6; i++){
@@ -90,6 +90,7 @@ window.addEventListener('load', function() {
             this.bubblegen.update(deltaTime);
             this.tubes.forEach(element => {element.update(deltaTime);});
             this.worldElementsDown.forEach(element => {element.update(deltaTime);});
+            this.worldElementsUp.forEach(element => {element.update(deltaTime);});
             this.ref += this.Fish.backgroundspeed * this.Fish.speed;
             // console.log(this.Fish.x,this.Fish.xTrue, this.ref);
         }

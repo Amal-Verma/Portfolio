@@ -18,6 +18,7 @@ export default class Joystick {
         });
 
         window.addEventListener('touchmove', (e) => {
+            e.preventDefault();
             if (this.isDragging){
                 this.joystickX = e.touches[0].clientX;
                 this.joystickY = e.touches[0].clientY;
@@ -42,7 +43,7 @@ export default class Joystick {
     getDirection(){
         let nmax = Math.max(Math.abs(this.joystickX - this.x), Math.abs(this.joystickY - this.y));
         if (nmax === 0) return [0, 0];
-        console.log(nmax, this.joystickX - this.x, this.joystickY - this.y);
+        // console.log(nmax, this.joystickX - this.x, this.joystickY - this.y);
         return [(this.joystickX - this.x) / nmax, (this.joystickY - this.y) / nmax];
     }
 
