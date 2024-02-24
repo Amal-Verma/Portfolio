@@ -20,7 +20,7 @@
     height: 500px;
 } */
 
-header, #fish, #background, #name, #job, #infoBoard, #infoBoardMobile, #bubble, #skill, #coral, #project1, #project2, #project3, #project4, #portal, #contactlogo, #about, #joystick, #direction, #rotate{
+header, #fish, #background, #name, #job, #infoBoard, #infoBoardMobile, #bubble, #skill, #coral, #project1, #project2, #project3, #project4, #portal, #contactlogo, #about, #joystick, #direction, #rotate, #easter{
     display: none;
 }
 /* w = 50 h =46 fish */

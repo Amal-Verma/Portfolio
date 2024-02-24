@@ -1,6 +1,6 @@
 // import layer from "./layer";
 // import drawTextBubble from "./Textbubble.js";
-import { isInside, isInside2 } from "./Extra.js";
+import { isInside, isInside2, isInside3 } from "./Extra.js";
 
 export default class Fish {
   constructor(world, height) {
@@ -122,7 +122,7 @@ export default class Fish {
     }
 
     if (this.world.textobj !== null) if (this.world.textobj.end) this.world.textobj = null;
-    if(isInside(this, this.world.textobj) || isInside2(this, this.world.textobj)){
+    if(isInside(this, this.world.textobj) || isInside2(this, this.world.textobj) || isInside3(this, this.world.textobj)){
       if (this.world.textobj.text.length > this.world.textindex){
         // console.log(this.world.textobj);
         this.textcount += deltaTime;
@@ -143,6 +143,12 @@ export default class Fish {
           this.world.textobj = element;
         }
       });
+
+      this.world.Easters.forEach(element => {
+        if(isInside3(this, element)){
+          this.world.textobj = element;
+        }
+      })
 
       for (let i = 0; i < this.world.bubblegen.bubbles.length; i++){
         if(isInside2(this, this.world.bubblegen.bubbles[i])){

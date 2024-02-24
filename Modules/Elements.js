@@ -28,7 +28,7 @@ export class float extends Element{
     update(deltaTime){
         this.angle += deltaTime * 0.001;
         this.y = this.y + Math.sin(this.angle) * this.world.refSize/1000;
-        console.log(this.y);
+        // console.log(this.y);
     }
 }
 

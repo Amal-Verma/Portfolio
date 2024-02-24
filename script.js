@@ -8,6 +8,7 @@ import { Portal } from "./Modules/portal.js";
 import drawTextBubble from "./Modules/Textbubble.js";
 import { isTouchDevice } from "./Modules/Extra.js";
 import Joystick from "./Modules/joystick.js";
+import Easter from "./Modules/Easter.js";
 
 window.addEventListener('load', function() {
     const canvas = document.getElementById('canvas1');
@@ -76,8 +77,11 @@ window.addEventListener('load', function() {
             this.bubblegen = new Bubblegen(this, document.getElementById('coral'), this.refSize*2, this.worldElementsUp[0].width/2 + this.width/2);
 
             this.decoration = [new Element(this, document.getElementById("direction"), this.refSize * 2.5, this.width/2 - 1.5 * this.refSize)];
-
             this.decoration[0].x -= this.decoration[0].width/2;
+
+            this.Easters = 
+            [new Easter(this, document.getElementById('easter'), this.refSize*2, 10 * this.width/2, this.height / 3, "Nothing to see here"),
+            new Easter(this, document.getElementById('easter'), this.refSize*2, -10 * this.width/2, this.height / 3, "Nothing to see here"),]
 
             if (this.ismobile) this.Joystick = new Joystick(this,canvas, this.width/5, this.height /2, this.refSize);
             // console.log(this.worldElementsDown[0].x);
@@ -101,6 +105,7 @@ window.addEventListener('load', function() {
             this.worldElementsDown.forEach(element => {element.draw(context);});
             this.tubes.forEach(element => {element.draw(context);});
             this.decoration.forEach(element => {element.draw(context);});
+            this.Easters.forEach(element => {element.draw(context);});
 
             this.Fish.draw(context);
             

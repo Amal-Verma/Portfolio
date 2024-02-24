@@ -15,7 +15,7 @@ export default class Bubblegen extends Element {
                     ["React", 6],
                     ["Node.js", 7],
                     ["Express", 8],
-                    ["MySql", 0],
+                    ["MySQL", 0],
                     ["Unity", 9],
                     ["Excel", 10],
                     ["C#", 11],
