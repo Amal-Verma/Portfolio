@@ -43,7 +43,8 @@ export class Portal{
                 this.world.Joystick.joystickX = this.world.Joystick.x;
                 this.world.Joystick.joystickY = this.world.Joystick.y;}
 
-            window.open(this.url, '_blank').focus();
+            // window.open(this.url, '_blank').focus();
+            window.location.href = this.url;
             this.prev = this.in;
             this.resetcount = 0;
             
