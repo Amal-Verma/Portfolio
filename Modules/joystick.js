@@ -1,6 +1,7 @@
 export default class Joystick {
-    constructor(world, x, y, radius){
+    constructor(world, canvas,  x, y, radius){
         this.world = world;
+        this.canvas = canvas;
         this.x = x;
         this.y = y;
         this.joystickX = this.x;
@@ -11,13 +12,13 @@ export default class Joystick {
         this.isDragging = false;
         this.img = document.getElementById('joystick');
 
-        window.addEventListener('touchstart', (e) => {
+        this.canvas.addEventListener('touchstart', (e) => {
             if (Math.abs(e.touches[0].clientX - this.x) < 3 * this.radius && Math.abs(e.touches[0].clientY - this.y) < 3 * this.radius){
                 this.isDragging = true;
             }
         });
 
-        window.addEventListener('touchmove', (e) => {
+        this.canvas.addEventListener('touchmove', (e) => {
             e.preventDefault();
             if (this.isDragging){
                 this.joystickX = e.touches[0].clientX;
@@ -32,7 +33,7 @@ export default class Joystick {
             }
         });
 
-        window.addEventListener('touchend', (e) => {
+        this.canvas.addEventListener('touchend', (e) => {
             this.isDragging = false;
             this.joystickX = this.x;
             this.joystickY = this.y;

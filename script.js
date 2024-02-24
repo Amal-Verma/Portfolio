@@ -79,7 +79,7 @@ window.addEventListener('load', function() {
 
             this.decoration[0].x -= this.decoration[0].width/2;
 
-            if (this.ismobile) this.Joystick = new Joystick(this, this.width/5, this.height /2, this.refSize);
+            if (this.ismobile) this.Joystick = new Joystick(this,canvas, this.width/5, this.height /2, this.refSize);
             // console.log(this.worldElementsDown[0].x);
 
             // console.log(this.width,this.ground);
