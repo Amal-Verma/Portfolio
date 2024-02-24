@@ -1,0 +1,26 @@
+*{  
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+#canvas1{
+    /* border: 5px solid black; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(20,145,185);
+    background: linear-gradient(0deg, rgba(20,145,185,1) 30%, rgba(34,188,178,1) 55%, rgba(11,214,187,1) 80%);
+}
+
+
+
+/* .fitToScreen{
+    height: 500px;
+} */
+
+header, #fish, #background, #name, #job, #infoBoard, #infoBoardMobile, #bubble, #skill, #coral, #project1, #project2, #project3, #project4, #portal, #contactlogo, #about, #joystick, #direction, #rotate{
+    display: none;
+}
+/* w = 50 h =46 fish */
