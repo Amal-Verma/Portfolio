@@ -122,7 +122,7 @@ window.addEventListener('load', function() {
                 let rimg = document.getElementById("rotate");
                 let rwidth = this.width;
                 let rheight = rimg.height * rwidth / rimg.width;
-                context.drawImage(rimg, 0, (this.height - rimg.height) / 2, rwidth, rheight);
+                context.drawImage(rimg, 0, (this.height - rheight) / 2, rwidth, rheight);
             }
         }
     }
