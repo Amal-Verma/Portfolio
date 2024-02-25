@@ -80,7 +80,7 @@ window.addEventListener('load', function() {
             this.decoration[0].x -= this.decoration[0].width/2;
 
             this.Easters = 
-            [new Easter(this, document.getElementById('easter'), this.refSize*2, 10 * this.width/2, this.height / 3, "This portfolio is made using HTML, CSS, and JavaScript. It is both desktop and mobile-friendly.It is better in mobile view. You can go into the tubes to different links. The entire world is a loop.")]
+            [new Easter(this, document.getElementById('easter'), this.refSize*2, this.layer.width* 3 - this.refSize*2, this.height / 3, "This portfolio is made using HTML, CSS, and JavaScript with Canvas. It is both desktop and mobile-friendly. It is better in mobile view. You can go into the tubes to different links. The entire world is a loop.")]
 
             if (this.ismobile) this.Joystick = new Joystick(this,canvas, this.width/5, this.height /2, this.refSize);
             // console.log(this.worldElementsDown[0].x);
