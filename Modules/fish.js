@@ -86,6 +86,20 @@ export default class Fish {
     else this.backgroundspeed = 0;
     // if(this.x < this.width/2) this.x = this.width/2;
     // if(this.x > this.World.width - this.width/2) this.x = this.World.width - this.width/2;
+    if (this.world.ref > this.world.layer.width*3) {
+      console.log(this.world.ref, this.x, this.xTrue);
+      this.world.ref -= this.world.layer.width*5;
+      this.xTrue -= this.world.layer.width*5;
+      // this.x -= this.speed
+      // console.log(this.world.ref, this.x, this.xTrue);
+    }
+    if (this.world.ref < -this.world.layer.width*2) {
+      console.log(this.world.ref, this.x, this.xTrue);
+      this.world.ref += this.world.layer.width*5;
+      this.xTrue += this.world.layer.width*5;
+      // this.x -= this.speed
+      // console.log(this.world.ref, this.x, this.xTrue);
+    }
 
     this.y += this.ym*this.speed;
     if(this.y < this.height/2) this.y = this.height/2;
